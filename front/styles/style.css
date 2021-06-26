@@ -1,0 +1,204 @@
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:whitesmoke;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Container
+====================================*/
+/* .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; */
+/* } */
+
+/* Header
+====================================*/
+.header {
+    margin: 0 auto;
+    background-color: black;
+    /* position: absolute; */
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    align-items: center;
+}
+
+/* Logo
+====================================*/
+.logo__item {
+    padding-left: 20px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Nav
+====================================*/
+.nav__login, .nav__registration {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.1s linear;
+}
+
+.nav__registration {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.nav__login:hover, .nav__registration:hover {
+    opacity: 1;
+}
+
+/* main
+====================================*/
+.main-content {
+    padding: 20px 0px 0px 0px;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.main-content__inner {
+    background-color: white;   
+}
+
+.content-title {
+    padding-left: 20px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.content-title-text {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 400;
+}
+
+.food-image {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.food-image-content {
+    padding-bottom: 10px;
+}
+
+/* time_complexity
+====================================*/
+
+.time_complexity {
+    display: flex;
+    margin: 20px auto;
+    background-color:rgb(233, 226, 226);
+}
+
+.cooking-time, .complexity {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.complexity {
+    margin: auto;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.cooking-time {
+    margin-top: 10px;
+}
+
+.cooking-time-value {
+    margin: 0 auto;
+}
+
+.color {
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(27, 218, 27);
+}
+
+.complexity-content {
+    margin: 0;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.complexity-text {
+    margin-right: 30px;
+}
+
+/* input-number
+====================================*/
+
+.input-number {
+    display: flex;
+    justify-content: center;
+}
+
+.input-number-input {
+    margin: auto 0;
+}
+
+.input-number-text {
+    padding: 0 20px;
+    font-weight: 700;
+}
+
+/* list-video
+====================================*/
+.list-video {
+    display: flex;
+}
+
+.list, .video {
+    width: 50%;
+    align-items: center;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.list-video-title {
+    padding: 0 0 0 40px;
+    font-weight: 700;
+}
+
+.list-content{
+    counter-reset: myCounter;
+  }
+  
+.list-content-item{
+    list-style: none;
+}
+
+.list-content-item:before {
+    counter-increment: myCounter;
+    content:counter(myCounter);
+    color: white;
+    background: #000000;
+    display: inline-block;
+    text-align: center;
+    margin: 5px 10px 5px 0px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+}
