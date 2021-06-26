@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="header__inner">
             <div class="logo">
@@ -20,6 +20,7 @@
             </div>
 
             <div class="nav">
+                <a class="nav__add__recipe" href="#">Добавить рецепт</a>
                 <a class="nav__login" href="#">Войти</a>
                 <a class="nav__registration" href="#">Регистрация</a>
             </div>
@@ -27,11 +28,11 @@
     </div><!-- /.container -->
 </header>
 
-<div class="main-content">
+<div class="main-content" id="main-content">
     <div class="container">
         <div class="main-content__inner">
             <div class="content-title">
-                <h1 class="content-title-text">Курица гриль, в духовке, на вертеле, на углях, любим есть и готовить</h1>
+                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
             </div>
 
             <div class="food-image">
@@ -58,7 +59,9 @@
                 </div>
 
                 <div class="input-number-input">
-                    <input type="number" value="1" min="1" max="10" step="1">
+                    <form>
+                        <input class="field_input" type="number" value="1" min="1" max="99" step="1" onchange='eventForm(this.value)' >
+                    </form>
                 </div>
 
                 <div class="input-number-text">
@@ -66,31 +69,81 @@
                 </div>
             </div>
 
-            <div class="list-video">
+            <div class="list_and_video">
                 <div class="list">
-                    <h4 class="list-video-title"> Список ингридиентов </h4>
-                    <ol class="list-content">
-                        <li class="list-content-item">1 сырая курица на 1-1,2 кг от бренда «Петруха»</li>
-                        <li class="list-content-item">3-4 зубчика чеснока</li>
-                        <li class="list-content-item">1-2 веточки розмарина</li>
-                        <li class="list-content-item">1-2 ст. л. мёда</li>
-                        <li class="list-content-item">сок и цедра 1 лимона</li>
-                        <li class="list-content-item">0,5 ч. л. листиков свежего тимьяна</li>
-                        <li class="list-content-item">оливковое масло «экстра вирджин» + для жарк</li>
-                        <li class="list-content-item">соль и свежемолотый чёрный перец</li> 
-                    </ol>
-                    
+                    <h4 class="list_and_video_title"> Список ингредиентов </h4>
+
+                    <div class="table_conteiner">
+                            
+                            <table class="ingredients_table">
+                                
+                                <tbody>
+                                    <tr>
+                                        <td class="ingredients_table_td">тесто слоеное бездрожжевое</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.125">0.125</td>
+                                        <td class="ingredients_table_td">пласта</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">творог зерненый</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="75">75</td>
+                                        <td class="ingredients_table_td">г</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">голубика</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="62.5">62.5</td>
+                                        <td class="ingredients_table_td">г</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">яйца куриные</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.125">0.125</td>
+                                        <td class="ingredients_table_td">шт.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">яичные желтки</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.25">0.25</td>
+                                        <td class="ingredients_table_td">шт.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">сахар</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.5">0.5</td>
+                                        <td class="ingredients_table_td">ст. л.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">ванильный экстракт</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.125">0.125</td>
+                                        <td class="ingredients_table_td">ч. л.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">соль морская</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="1">1</td>
+                                        <td class="ingredients_table_td">ч. л.</td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table> 
+                                                    
+                    </div>
                 </div>
 
                 <div class="video">
-                    <h4 class="list-video-title">Видео-инструкция рецепта</h4>
+                    <h4 class="list_and_video_title">Видео-инструкция рецепта</h4>
+                    <div class="video_content">
+                        <video class="video" poster="images/video_poster.png" controls src="https://vid.edimdoma.ru/data/video/0003/0897/30897-original.mp4?1393395570"></video>
+                    </div>
                 </div>
             </div>
         </div> <!-- /.main-content__inner -->
     </div> <!-- /.container -->
 </div>
-
-
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>

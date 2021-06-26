@@ -22,16 +22,25 @@ body {
 /* Header
 ====================================*/
 .header {
-    margin: 0 auto;
     background-color: black;
-    /* position: absolute; */
+    /* border-radius: 10px; */
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    max-width: 1200px;
+}
+
+.header.fixed {
+    position: fixed;
+    padding: 0px 0px;
+
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    border-bottom: 1px solid #000;
     align-items: center;
 }
 
@@ -48,7 +57,7 @@ body {
 
 /* Nav
 ====================================*/
-.nav__login, .nav__registration {
+.nav__login, .nav__registration, .nav__add__recipe {
     font-family: 'Fira Sans Condensed', sans-serif;
     text-decoration: none;
     color: #fff;
@@ -57,20 +66,29 @@ body {
     transition: opacity 0.1s linear;
 }
 
-.nav__registration {
-    padding-left: 20px;
+.nav__registration{
+    padding-left: 10px;
     padding-right: 20px;
 }
 
+.nav__login{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
-.nav__login:hover, .nav__registration:hover {
+.nav__add__recipe {
+    padding-right: 10px;
+}
+
+
+.nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover {
     opacity: 1;
 }
 
 /* main
 ====================================*/
 .main-content {
-    padding: 20px 0px 0px 0px;
+    margin-top: 100px;
     background-color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -82,8 +100,9 @@ body {
 
 .content-title {
     padding-left: 20px;
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
+    border: 1px solid #000;
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
 }
 
 .content-title-text {
@@ -99,6 +118,7 @@ body {
 
 .food-image-content {
     padding-bottom: 10px;
+    border-radius: 10px;
 }
 
 /* time_complexity
@@ -106,24 +126,22 @@ body {
 
 .time_complexity {
     display: flex;
-    margin: 20px auto;
-    background-color:rgb(233, 226, 226);
+    margin-bottom: 20px;
+    justify-content: space-evenly;
 }
 
 .cooking-time, .complexity {
-    width: 50%;
+    max-width: 50%;
+    width: 200px;
+    height: 75px;
     text-align: center;
-    margin-bottom: 20px;
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
 }
 
 .complexity {
-    margin: auto;
     display: flex;
     justify-content: space-around; 
-}
-
-.cooking-time {
-    margin-top: 10px;
 }
 
 .cooking-time-value {
@@ -134,7 +152,7 @@ body {
     margin: auto;
     height: 40px;
     width: 40px;
-    background-color: rgb(27, 218, 27);
+    background-color:lime;
 }
 
 .complexity-content {
@@ -144,7 +162,7 @@ body {
 }
 
 .complexity-text {
-    margin-right: 30px;
+    margin: auto 30px auto 0px;
 }
 
 /* input-number
@@ -164,41 +182,66 @@ body {
     font-weight: 700;
 }
 
-/* list-video
+/* list-and-video
 ====================================*/
-.list-video {
+.list_and_video {
     display: flex;
+    /* justify-content: space-around; */
 }
 
 .list, .video {
     width: 50%;
     align-items: center;
-    border-radius: 10px;
-    background-color: antiquewhite;
 }
 
-.list-video-title {
-    padding: 0 0 0 40px;
+.list_and_video_title {
+    padding: 0 0 0 24.5px;
     font-weight: 700;
 }
 
-.list-content{
-    counter-reset: myCounter;
-  }
-  
-.list-content-item{
-    list-style: none;
+.table_conteiner {
+    /* margin-left: 20px    ; */
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
 }
 
-.list-content-item:before {
-    counter-increment: myCounter;
-    content:counter(myCounter);
-    color: white;
-    background: #000000;
-    display: inline-block;
-    text-align: center;
-    margin: 5px 10px 5px 0px;
+.ingredients_table {
+    border-collapse: collapse;
+    counter-reset: schetchik;  /* счётчик с названием "schetchik" работает в рамках класса .demotable */ 
+  
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 2;
+}
+
+.ingredients_table_td {
+    font-size: 16px;
+    width: 100%;
+}
+
+.ingredients_table tr {
     line-height: 40px;
-    width: 40px;
-    height: 40px;
+    counter-increment: schetchik;  /* при встрече тега tr счётчик с названием "schetchik" увеличивается на единицу */     
+}
+
+.ingredients_table td,
+.ingredients_table tr:before {
+    padding: .1em .5em;
+    /* border: 1px solid #E7D5C0; */
+}
+
+
+.ingredients_table tr:before {
+    content: counter(schetchik) ".";  /* значение счётчика с названием "schetchik" записывается в первую клетку строки */ 
+    display: table-cell;
+    vertical-align: middle;
+    /* color: #978777; */
+}
+
+
+/* video
+====================================*/
+.video {
+    border-radius: 10px;
+    width: 600px;
 }
