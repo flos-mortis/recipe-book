@@ -3,8 +3,6 @@ let main_content = document.querySelector("#main-content");
 let main_content_height = main_content.clientHeight;
 let scroll_position = window.scrollY;
 
-console.log(scroll_position)
-
 document.addEventListener("scroll", function() {
     scroll_position = window.scrollY;
 

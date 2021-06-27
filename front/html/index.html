@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Fira+Sans+Condensed:ital,wght@1,900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -36,12 +36,12 @@
             </div>
 
             <div class="food-image">
-                <img class= "food-image-content" src="images/food-image.jpg">
+                <img class= "food-image-content" src="../images/food-image.jpg">
             </div>
 
             <div class="time_complexity">
                 <div class="cooking-time">
-                    <img src="images/alarm.png" >
+                    <img src="../images/alarm.png" >
                     <h4 class="cooking-time-value">3 часа</h4>
                 </div>
 
@@ -132,18 +132,72 @@
                     </div>
                 </div>
 
-                <div class="video">
+                <div class="video_player">
                     <h4 class="list_and_video_title">Видео-инструкция рецепта</h4>
                     <div class="video_content">
-                        <video class="video" poster="images/video_poster.png" controls src="https://vid.edimdoma.ru/data/video/0003/0897/30897-original.mp4?1393395570"></video>
+                        <video class="video" poster="../images/video_poster.png" controls src="https://vid.edimdoma.ru/data/video/0003/0897/30897-original.mp4?1393395570"></video>
                     </div>
+                </div> <!-- /.video -->
+            </div> <!-- /.list_and_video -->
+            <div class="text_instruction">
+                <h4 class="text_instruction_title">Текстовая инструкция по приготовлению блюда</h4>
+                <div class="text_instruction_content">
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 1</div>
+                        <div class="recipe__step-text">
+                            Разогрейте духовку с грилем до 200 °С. Наколите баклажаны вилкой, положите на застеленный фольгой противень и поставьте его в низ духовки.
+                        </div>
+                    </div>
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 2</div>
+                        <div class="recipe__step-text">
+                            Перцы разрежьте пополам, очистите, уложите кожицей вверх на решетку, поставьте в верхнюю часть духовки. Запекайте 30 мин. Выключите гриль, уменьшите температуру духовки до 180 °С.
+                        </div>
+                    </div>  
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 3</div>
+                        <div class="recipe__step-text">
+                            Готовые перцы положите в миску, затяните пленкой, через 15 мин. очистите от кожицы и нарежьте квадратиками 1,5–2 см. Баклажаны разрежьте вдоль, выньте мякоть ложкой, порубите и положите в сито. Посолите, оставьте в раковине на 15 мин., чтобы стекла лишняя жидкость.
+                        </div>
+                    </div>
+                    
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 4</div>
+                        <div class="recipe__step-text">
+                            Смешайте баклажаны с перцами, измельченным чесноком, 4 ст. л. масла, перцем и пармезаном.
+                        </div>
+                    </div>
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 5</div>
+                        <div class="recipe__step-text">
+                            С хлеба срежьте корки. Для пропитки взбейте яйца со сливками, солью и прованскими травами до однородности. Замочите хлеб в этой смеси на 10 мин.
+                        </div>
+                    </div>
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 6</div>
+                        <div class="recipe__step-text">
+                            Хорошенько смажьте оливковым маслом форму для выпечки диаметром 24 см. Выложите дно и бока формы хлебом слегка внахлест, прижимая края пальцами, чтобы получился сплошной слой. Выложите начинку и поставьте шарлотку в духовку на 35 мин. Подавайте теплой.
+                        </div>
+                    </div>
+                </div> <!-- /.text_instruction_content -->
+            </div> <!-- /.text_instruction -->
+            <div class="footer">
+                <div class="footer_content">
+
                 </div>
             </div>
         </div> <!-- /.main-content__inner -->
     </div> <!-- /.container -->
-</div>
-    <script src="js/main.js"></script>
-    <script src="js/app.js"></script>
+</div> <!-- /.main-content -->
+
+
+<script src="../js/main.js"></script>
+<script src="../js/app.js"></script>
 
 </body>
 </html>

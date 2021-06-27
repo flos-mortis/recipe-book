@@ -180,6 +180,7 @@ body {
 .input-number-text {
     padding: 0 20px;
     font-weight: 700;
+    font-size: 20px;
 }
 
 /* list-and-video
@@ -244,4 +245,37 @@ body {
 .video {
     border-radius: 10px;
     width: 600px;
+    /* height: 346px; */
+}
+
+/* text_instruction
+====================================*/
+.recipe__step-title {
+    margin: 15px 0px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.recipe__step-text {
+    font-size: 16px;
+}
+
+.text_instruction_title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+}
+
+.text_instruction_content {
+    margin: 0px auto;
+    max-width: 70%;
+}
+
+/* footer
+====================================*/
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    background-color:rgb(190, 190, 190);
+    height: 300px;
 }
