@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Fira+Sans+Condensed:ital,wght@1,900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Кулинарная книга</title>
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo">
+                <h1>
+                    <a class="logo__item" href="#">Кулинарная книга</a>
+                </h1>
+            </div>
+
+            <div class="nav">
+                <a class="nav__add__recipe" href="#">Добавить рецепт</a>
+                <a class="nav__login" href="#">Войти</a>
+                <a class="nav__registration" href="#">Регистрация</a>
+            </div>
+        </div><!-- /.header__inner -->
+    </div><!-- /.container -->
+</header>
+<div class="main-content" id="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <form id="login">
+                <h1>Вход</h1>
+                <fieldset id="inputs">
+                    <input id="email" type="text" placeholder="Введите свой E-mail" autofocus required>
+                    <input id="password" type="password" placeholder="Введите пароль" required>
+                </fieldset>
+                <fieldset id="actions">
+                <input type="submit" id="submit_1" value="ВОЙТИ">
+                <a href="register.html">Регистрация</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
