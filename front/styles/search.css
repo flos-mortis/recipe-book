@@ -1,0 +1,228 @@
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:whitesmoke;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Container
+====================================*/
+/* .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; */
+/* } */
+
+/* Header
+====================================*/
+.header {
+    background-color: black;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    max-width: 1200px;
+}
+
+.header.fixed {
+    position: fixed;
+    padding: 0px 0px;
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+/* Logo
+====================================*/
+.logo__item {
+    padding-left: 20px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Nav
+====================================*/
+.nav__login, .nav__registration, .nav__add__recipe {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.1s linear;
+}
+
+.nav__registration{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.nav__login{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav__add__recipe {
+    padding-right: 10px;
+}
+
+
+.nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover {
+    opacity: 1;
+}
+
+/* main-content
+====================================*/
+.main-content {
+    margin-top: 120px;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.main-content__inner {
+    background-color: white;   
+}
+.content {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    /* border-radius: 10px; */
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    max-height: 200px;
+}
+
+.content-title {
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
+    max-width: 70%;
+    max-height: 20%;
+    margin: 5px auto 0px auto;
+}
+
+.content-title-text {
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* under_title  
+====================================*/
+.under_title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 100px; 
+}
+
+.food-image {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.food-image-content {
+    /* padding-bottom: 10px; */
+    border-radius: 10px;
+    /* width: 70%;/ */
+    height: 150px;
+}
+
+/* time_complexity
+====================================*/
+.time_complexity {
+    margin: auto 0px;
+}
+
+.cooking-time, .complexity {
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.cooking-time {
+    display: flex;
+}
+
+.cooking-time img {
+    height: 30px;
+    margin: auto ;
+}
+
+.complexity {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cooking-time-value {
+    margin: auto auto;
+}
+
+.color {
+    margin: auto;
+    height: 25px;
+    width: 25px;
+    background-color:lime;
+    border-radius: 8px;
+}
+
+.complexity-content {
+    margin: 0;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.complexity-text {
+    margin: auto 15px auto 5px;
+}
+
+/* pagination
+====================================*/
+.pagination {
+    height: 70px;
+    text-align: center;
+}
+
+.pagination_block {
+    display: inline-block;
+    
+}
+
+.pagination_block_item {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    transition: background-color .3s;
+    margin: 0 4px;
+
+}
+
+.pagination_block_item .active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination_block_item:hover:not(.active) {
+    background-color: #ddd;
+}

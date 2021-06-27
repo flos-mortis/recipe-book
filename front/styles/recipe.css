@@ -153,6 +153,7 @@ body {
     height: 40px;
     width: 40px;
     background-color:lime;
+    border-radius: 8px;
 }
 
 .complexity-content {
@@ -187,7 +188,6 @@ body {
 ====================================*/
 .list_and_video {
     display: flex;
-    /* justify-content: space-around; */
 }
 
 .list, .video {
@@ -245,7 +245,6 @@ body {
 .video {
     border-radius: 10px;
     width: 600px;
-    /* height: 346px; */
 }
 
 /* text_instruction
