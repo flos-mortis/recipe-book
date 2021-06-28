@@ -1,14 +1,14 @@
 body {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color:whitesmoke;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: whitesmoke;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Container
@@ -22,83 +22,89 @@ body {
 /* Header
 ====================================*/
 .header {
-    background-color: black;
-    /* border-radius: 10px; */
-    z-index: 1000;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    max-width: 1200px;
+  background-color: black;
+  /* border-radius: 10px; */
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  max-width: 1200px;
 }
 
 .header.fixed {
-    position: fixed;
-    padding: 0px 0px;
-
+  position: fixed;
+  padding: 0px 0px;
 }
 
 .header__inner {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
 }
 
 /* Logo
 ====================================*/
 .logo__item {
-    padding-left: 20px;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 38px;
-    color: #fff;
-    text-decoration: none;
+  padding-left: 20px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Nav
 ====================================*/
-.nav__login, .nav__registration, .nav__add__recipe {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    opacity: 0.75;
-    transition: opacity 0.1s linear;
+.nav__login,
+.nav__registration,
+.nav__add__recipe {
+  font-family: "Fira Sans Condensed", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.75;
+  transition: opacity 0.1s linear;
 }
 
-.nav__registration{
-    padding-left: 10px;
-    padding-right: 20px;
+.nav__registration {
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
-.nav__login{
-    padding-left: 10px;
-    padding-right: 10px;
+.nav__login {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .nav__add__recipe {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
-
-.nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover {
-    opacity: 1;
+.nav__login:hover,
+.nav__registration:hover,
+.nav__add__recipe:hover {
+  opacity: 1;
 }
 
 /* main-content
 ====================================*/
 
 .main-content {
-    padding-top: 100px;
-    background-color: #fff;
+  padding-top: 100px;
+  background-color: #fff;
 }
 .content {
-    max-width: 80%;
-    margin: auto auto;
+  max-width: 80%;
+  margin: auto auto;
 }
 
 .description {
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.search {
+    height: 300px;
 }
