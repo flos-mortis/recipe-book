@@ -11,36 +11,76 @@
 
 <body>
 
-<header class="header" id="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="logo">
-                <h1>
-                    <a class="logo__item" href="#">Кулинарная книга</a>
-                </h1>
-            </div>
+    <div class="main_content">
+        <div class="main_content_inner">
 
-            <div class="nav">
-                <a class="nav__add__recipe" href="#">Добавить рецепт</a>
-                <a class="nav__login" href="#">Войти</a>
-                <a class="nav__registration" href="#">Регистрация</a>
-            </div>
-        </div><!-- /.header__inner -->
-    </div><!-- /.container -->
-</header>
+            <div class="header">
+                <h1 class="header_title">Кулинарная книга</h1>
+                <nav class="navigation_bar">
+                    <a href="#" class="nav_item">
+                        Регистрация
+                    </a>
 
-<div class="main-content">
-    <div class="content">
-        <div class="description">
-            Наше приложение - это база с рецептами и видео по готовке. Вы можете произвести поиск необходимого блюда: по ингредиентам, сложности и длительности готовки. Понравившиеся рецепты можно сохранять и просматривать на странице профиля. Так же вы можете загрузить свой рецепт на сайт и его будут видеть другие пользователи. Внутри каждого рецепта можно можно просчитать необходимое количество ингредиентов для определённого количества порций
-        </div>
-        <div class="search">
-            
-        </div>
-    </div>
-</div>
-<!-- <script src="../js/main.js"></script>
-<script src="../js/app.js"></script> -->
+                    <a href="#" class="nav_item">
+                        Войти
+                    </a>
+                </nav>
+            </div> <!-- /.header -->
+
+            <div class="search">
+                <div class="search_items">
+                    <h2 class="search_title">
+                        Поиск блюда
+                    </h2>
+
+                    <h3 class="time_title">
+                        Время приготовления
+                    </h3>
+                    <div class="time_items">
+                        <a class="time_item" href="#" onmouseover="time_hover(this, 'black')" onmouseout="time_hover(this, 'white')">
+                            <img class="time_item_img" src="../images/main_alarm.png" alt="">
+                            <p class="time_item_text">до 30 мин</p>
+                        </a>
+                        <a class="time_item" href="#" onmouseover="time_hover(this, 'black')" onmouseout="time_hover(this, 'white')">
+                            <img class="time_item_img" src="../images/main_alarm.png" alt="">
+                            <p class="time_item_text">30 мин - час</p>
+                        </a>
+                        <a class="time_item" href="#" onmouseover="time_hover(this, 'black')" onmouseout="time_hover(this, 'white')">
+                            <img class="time_item_img" src="../images/main_alarm.png" alt="">
+                            <p class="time_item_text">более часа</p>
+                        </a>
+                    </div>
+                    
+                    <h3 class="complexity_title">
+                        Сложность
+                    </h3>
+                    
+                    <div class="complexity_items">
+                        <a class="complexity_item" href="#">
+                            <div class="complexity_item_img green"></div>
+                            <p class="complexity_item_text">легкая</p>
+                        </a>
+                        <a class="complexity_item" href="#">
+                            <div class="complexity_item_img yellow"></div>
+                            <p class="complexity_item_text">средняя</p>
+                        </a>
+                        <a class="complexity_item" href="#">
+                            <div class="complexity_item_img red"></div>
+                            <p class="complexity_item_text">сложная</p>
+                        </a>
+                    </div>
+
+                    <button class="search_button" type="submit">
+                        Найти
+                    </button>
+                </div>
+                
+            </div> <!-- /.search_bar -->
+
+        </div> <!-- /.main_content_inner -->
+    </div> <!-- /.main_content -->
+
+    <script src="../js/main_page.js"></script>
 
 </body>
 </html>

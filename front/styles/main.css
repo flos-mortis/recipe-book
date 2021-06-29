@@ -1,110 +1,246 @@
 body {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: whitesmoke;
+  margin: 0;
+  background: url(../images/fon.jpg) no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-weight: 700;
 }
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
+.main_content_inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  -ms-grid-rows: 40% 60%;
+      grid-template-rows: 40% 60%;
+  grid-gap: 120px 0;
 }
 
-/* Container
-====================================*/
-/* .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; */
-/* } */
-
-/* Header
-====================================*/
 .header {
-  background-color: black;
-  /* border-radius: 10px; */
-  z-index: 1000;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  max-width: 1200px;
-}
-
-.header.fixed {
-  position: fixed;
-  padding: 0px 0px;
-}
-
-.header__inner {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  align-items: center;
-}
-
-/* Logo
-====================================*/
-.logo__item {
-  padding-left: 20px;
-  font-family: "Fira Sans Condensed", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: center;
   font-weight: 900;
-  font-size: 38px;
   color: #fff;
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
-/* Nav
-====================================*/
-.nav__login,
-.nav__registration,
-.nav__add__recipe {
-  font-family: "Fira Sans Condensed", sans-serif;
+.header_title {
+  font-size: 90px;
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.navigation_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.nav_item {
   text-decoration: none;
   color: #fff;
-  font-weight: 400;
-  opacity: 0.75;
-  transition: opacity 0.1s linear;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.nav__registration {
-  padding-left: 10px;
-  padding-right: 20px;
-}
-
-.nav__login {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.nav__add__recipe {
-  padding-right: 10px;
-}
-
-.nav__login:hover,
-.nav__registration:hover,
-.nav__add__recipe:hover {
-  opacity: 1;
-}
-
-/* main-content
-====================================*/
-
-.main-content {
-  padding-top: 100px;
-  background-color: #fff;
-}
-.content {
-  max-width: 80%;
-  margin: auto auto;
-}
-
-.description {
-  align-items: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+.nav_item:hover {
+  background-color: white;
+  color: #000;
 }
 
 .search {
-    height: 300px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
+
+.search_items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 30% 60%;
+      grid-template-columns: 10% 30% 60%;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.search_title {
+  text-align: center;
+  font-size: 40px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.time_title {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  margin: auto 0;
+}
+
+.time_items {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.time_item {
+  margin: auto 0px auto 30px;
+  text-align: center;
+  border: 2px solid #fff;
+  height: 90px;
+  width: 90px;
+  background: 0;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.time_item:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.time_item_img {
+  padding-top: 10%;
+}
+
+.time_item_text {
+  margin: 0;
+}
+
+.complexity_title {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  margin: auto 0;
+}
+
+.complexity_items {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.complexity_item {
+  margin: auto 0px auto 30px;
+  text-align: center;
+  border: 2px solid #fff;
+  height: 90px;
+  width: 90px;
+  background: 0;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.complexity_item:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.complexity_item_img {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  margin-top: 9px;
+  border-radius: 10px;
+}
+
+.complexity_item .green {
+  background-color: lawngreen;
+}
+
+.complexity_item .yellow {
+  background-color: yellow;
+}
+
+.complexity_item .red {
+  background-color: red;
+}
+
+.complexity_item_text {
+  margin: 0;
+  padding-top: 4px;
+}
+
+.search_button {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  width: 200px;
+  height: 80px;
+  margin: auto;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.search_button:hover {
+  background-color: #fff;
+  color: #000;
+}
+/*# sourceMappingURL=main.css.map */
