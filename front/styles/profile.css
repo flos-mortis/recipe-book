@@ -89,14 +89,28 @@ body {
     transition: opacity 0.1s linear;
 }
 
+/* main
+====================================*/
+.main-content {
+    margin-top: 75px;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
 
+.main-content__inner {
+    background-color: white;
+}
 
 #main {
     padding-top: 100px;
     background-color: #ffffff;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     text-align: center;
-    padding: 30px;
+    padding: 35px;
+    /*position: relative;*/
+    /*right: 45px;*/
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
