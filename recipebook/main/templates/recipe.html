@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link href="{% static 'css/recipe.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    Кулинарная книга
+{% endblock %}
+
+{% block content %}
+<div class="main-content" id="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <div class="content-title">
+                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
+            </div>
+
+            <div class="food-image">
+                <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
+            </div>
+
+            <div class="time_complexity">
+                <div class="cooking-time">
+                    <img src="{% static 'images/alarm.png' %}" >
+                    <h4 class="cooking-time-value">3 часа</h4>
+                </div>
+
+                <div class="complexity">
+                    <div class="complexity-content">
+                        <h4 class="complexity-text">Сложность </h4>
+                        <div class="color"></div>  
+                    </div>
+                </div>
+            </div> <!-- /.time_complexity -->
+
+            <div class="input-number">
+                <div class="input-number-text">
+                    <h4>Ингридиенты на</h4>
+                </div>
+
+                <div class="input-number-input">
+                    <form>
+                        <input class="field_input" type="number" value="1" min="1" max="99" step="1" onchange='eventForm(this.value)' >
+                    </form>
+                </div>
+
+                <div class="input-number-text">
+                    <h4>порцию</h4>
+                </div>
+            </div>
+
+            <div class="list_and_video">
+                <div class="list">
+                    <h4 class="list_and_video_title"> Список ингредиентов </h4>
+
+                    <div class="table_conteiner">
+                            
+                            <table class="ingredients_table">
+                                
+                                <tbody>
+                                    <tr>
+                                        <td class="ingredients_table_td">тесто слоеное бездрожжевое</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.125">0.125</td>
+                                        <td class="ingredients_table_td">пласта</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">творог зерненый</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="75">75</td>
+                                        <td class="ingredients_table_td">г</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">голубика</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="62.5">62.5</td>
+                                        <td class="ingredients_table_td">г</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">яйца куриные</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.125">0.125</td>
+                                        <td class="ingredients_table_td">шт.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">яичные желтки</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.25">0.25</td>
+                                        <td class="ingredients_table_td">шт.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">сахар</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.5">0.5</td>
+                                        <td class="ingredients_table_td">ст. л.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">ванильный экстракт</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="0.125">0.125</td>
+                                        <td class="ingredients_table_td">ч. л.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ingredients_table_td">соль морская</td>
+                                        <td class="ingredients_table_td ingredients_table_td_value" initial_value="1">1</td>
+                                        <td class="ingredients_table_td">ч. л.</td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table> 
+                                                    
+                    </div>
+                </div>
+
+                <div class="video_player">
+                    <h4 class="list_and_video_title">Видео-инструкция рецепта</h4>
+                    <div class="video_content">
+                        <video class="video" poster="{% static 'images/video_poster.png' %}" controls src="https://vid.edimdoma.ru/data/video/0003/0897/30897-original.mp4?1393395570"></video>
+                    </div>
+                </div> <!-- /.video -->
+            </div> <!-- /.list_and_video -->
+            <div class="text_instruction">
+                <h4 class="text_instruction_title">Текстовая инструкция по приготовлению блюда</h4>
+                <div class="text_instruction_content">
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 1</div>
+                        <div class="recipe__step-text">
+                            Разогрейте духовку с грилем до 200 °С. Наколите баклажаны вилкой, положите на застеленный фольгой противень и поставьте его в низ духовки.
+                        </div>
+                    </div>
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 2</div>
+                        <div class="recipe__step-text">
+                            Перцы разрежьте пополам, очистите, уложите кожицей вверх на решетку, поставьте в верхнюю часть духовки. Запекайте 30 мин. Выключите гриль, уменьшите температуру духовки до 180 °С.
+                        </div>
+                    </div>  
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 3</div>
+                        <div class="recipe__step-text">
+                            Готовые перцы положите в миску, затяните пленкой, через 15 мин. очистите от кожицы и нарежьте квадратиками 1,5–2 см. Баклажаны разрежьте вдоль, выньте мякоть ложкой, порубите и положите в сито. Посолите, оставьте в раковине на 15 мин., чтобы стекла лишняя жидкость.
+                        </div>
+                    </div>
+                    
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 4</div>
+                        <div class="recipe__step-text">
+                            Смешайте баклажаны с перцами, измельченным чесноком, 4 ст. л. масла, перцем и пармезаном.
+                        </div>
+                    </div>
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 5</div>
+                        <div class="recipe__step-text">
+                            С хлеба срежьте корки. Для пропитки взбейте яйца со сливками, солью и прованскими травами до однородности. Замочите хлеб в этой смеси на 10 мин.
+                        </div>
+                    </div>
+
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Шаг 6</div>
+                        <div class="recipe__step-text">
+                            Хорошенько смажьте оливковым маслом форму для выпечки диаметром 24 см. Выложите дно и бока формы хлебом слегка внахлест, прижимая края пальцами, чтобы получился сплошной слой. Выложите начинку и поставьте шарлотку в духовку на 35 мин. Подавайте теплой.
+                        </div>
+                    </div>
+                </div> <!-- /.text_instruction_content -->
+            </div> <!-- /.text_instruction -->
+
+        </div> <!-- /.main-content__inner -->
+    </div> <!-- /.container -->
+</div> <!-- /.main-content -->
+{% endblock %}
+
