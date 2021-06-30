@@ -1,13 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block style %}
-    <link href="{% static 'css/сss1/main.css' %}" rel="stylesheet">
+{% block styles %}
+    <link href="{% static 'css/css2/search.css' %}" rel="stylesheet">
 {% endblock %}
 {% block title %}
     Кулинарная книга
 {% endblock %}
 
 {% block content %}
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo">
+                <h1>
+                    <a class="logo__item" href="{% url 'home' %}">Кулинарная книга</a>
+                </h1>
+            </div>
+
+            <div class="nav">
+                <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
+                <a class="nav__login" href="{% url 'autor' %}">Войти</a>
+                <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
+            </div>
+        </div><!-- /.header__inner -->
+    </div><!-- /.container -->
+</header>
 <div class="main-content" id="main-content">
     <div class="main-content__inner">
         <div class="content">
@@ -22,7 +39,7 @@
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="{% static/images/food-image.jpg' %}" >
+                        <img src="{% static 'images/alarm.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -44,12 +61,12 @@
 
             <div class="under_title">
                 <div class="food-image">
-                    <img class= "food-image-content" src="{% static/images/food-image.jpg' %}">
+                    <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
                 </div>
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="{% static/images/alarm.png' %}" >
+                        <img src="{% static 'images/alarm.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -71,12 +88,12 @@
 
             <div class="under_title">
                 <div class="food-image">
-                    <img class= "food-image-content" src="{% static/images/food-image.jpg' %}">
+                    <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
                 </div>
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="{% static/images/alarm.png' %}" >
+                        <img src="{% static 'images/alarm.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -98,12 +115,12 @@
 
             <div class="under_title">
                 <div class="food-image">
-                    <img class= "food-image-content" src="{% static/images/food-image.jpg' %}">
+                    <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
                 </div>
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="{% static/images/alarm.png' %}" >
+                        <img src="{% static 'images/alarm.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -125,12 +142,12 @@
 
             <div class="under_title">
                 <div class="food-image">
-                    <img class= "food-image-content" src="{% static/images/food-image.jpg' %}">
+                    <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
                 </div>
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="{% static/images/alarm.png' %}" >
+                        <img src="{% static 'images/alarm.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -152,12 +169,12 @@
 
             <div class="under_title">
                 <div class="food-image">
-                    <img class= "food-image-content" src="{% static/images/food-image.jpg' %}">
+                    <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
                 </div>
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="{% static/images/alarm-mini.png' %}" >
+                        <img src="{% static 'images/alarm-mini.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -179,12 +196,12 @@
 
             <div class="under_title">
                 <div class="food-image">
-                    <img class= "food-image-content" src="{% static/images/food-image.jpg' %}">
+                    <img class= "food-image-content" src="{% static 'images/food-image.jpg' %}">
                 </div>
 
                 <div class="time_complexity">
                     <div class="cooking-time">
-                        <img src="/images/alarm.png" >
+                        <img src="{% static '/images/alarm.png' %}" >
                         <h4 class="cooking-time-value">3 часа</h4>
                     </div>
 
@@ -210,8 +227,6 @@
                 <a class="pagination_block_item" href="#">7</a>
             </div>
         </div>
-    </div> <!-- /.main-content__inner  -->
-</div> <!-- main-content -->
-
-<script src="js/js2/app.js"></script>
+    </div>
+</div>
 {% endblock %}

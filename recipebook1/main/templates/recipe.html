@@ -8,6 +8,23 @@
 {% endblock %}
 
 {% block content %}
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo">
+                <h1>
+                    <a class="logo__item" href="{% url 'home' %}">Кулинарная книга</a>
+                </h1>
+            </div>
+
+            <div class="nav">
+                <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
+                <a class="nav__login" href="{% url 'autor' %}">Войти</a>
+                <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
+            </div>
+        </div><!-- /.header__inner -->
+    </div><!-- /.container -->
+</header>
 <div class="main-content" id="main-content">
     <div class="container">
         <div class="main-content__inner">
@@ -35,7 +52,7 @@
 
             <div class="input-number">
                 <div class="input-number-text">
-                    <h4>Ингридиенты на</h4>
+                    <h4>Ингредиенты на</h4>
                 </div>
 
                 <div class="input-number-input">

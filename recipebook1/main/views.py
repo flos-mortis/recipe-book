@@ -26,7 +26,7 @@ def add(request):
 def recipe(request):
     # method for get need recipe
     form = RecipeForm()
-    return redirect(request, 'main/recipe.html', {'recipe': form})
+    return redirect(request, 'recipe.html', {'recipe': form})
 
 
 def autor(request):

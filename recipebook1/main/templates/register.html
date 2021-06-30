@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block style %}
-    <link href="{% static 'css/сss1/main.css' %}" rel="stylesheet">
+{% block styles %}
+    <link href="{% static 'css/css2/search.css' %}" rel="stylesheet">
 {% endblock %}
 {% block title %}
     Кулинарная книга
 {% endblock %}
 
 {% block content %}
-<!--<div class="main-content" id="main-content">-->
-<!--    <div class="container">-->
     <form id="login">
         <h1>Регистрация</h1>
         <fieldset id="inputs">
@@ -21,9 +19,4 @@
             <input type="submit" id="submit_2" value="ЗАРЕГИСТРИРОВАТЬСЯ">
         </fieldset>
     </form>
-<!--</div>-->
-<!--    </div>-->
-
-<script src="js/js1/main.js"></script>
-<script src="js/js1/app.js"></script>
 {% endblock %}
