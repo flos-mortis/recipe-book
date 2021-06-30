@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        {% block style %}{% endblock %}
+        {% block styles %}{% endblock %}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Fira+Sans+Condensed:ital,wght@1,900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -12,26 +12,9 @@
         </title>
     </head>
     <body>
-        <header class="header" id="header">
-            <div class="container">
-                <div class="header__inner">
-                    <div class="logo">
-                        <h1>
-                            <a class="logo__item" href="#">Кулинарная книга</a>
-                        </h1>
-                    </div>
-
-                    <div class="nav">
-                        <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
-                        <a class="nav__login" href="{% url 'autor' %}">Войти</a>
-                        <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
-                        <a class="nav__login" href="{% url 'profile' %}">Профиль</a>
-                    </div>
-                </div><!-- /.header__inner -->
-            </div><!-- /.container -->
-        </header>
 
     {% block content %}{% endblock %}
 
     </body>
+    {% block scripts %}{% endblock %}
 </html>

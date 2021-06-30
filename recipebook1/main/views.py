@@ -6,7 +6,7 @@ from .forms import RecipeForm
 # main page with all recipes
 def main(request):
     recipe = Recipes.objects.order_by('-id')
-    return render(request, 'main/templates/main.html', {'recipes': recipe})
+    return render(request, 'main.html', {'recipes': recipe})
 
 
 # page add recipe
@@ -20,7 +20,7 @@ def add(request):
         else:
             error = 'неверно введены данные'
 
-    return render(request, 'main/templates/add.html', {'error': error})
+    return render(request, 'add.html', {'error': error})
 
 
 # page show recipe
