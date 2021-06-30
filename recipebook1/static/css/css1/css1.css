@@ -1,0 +1,582 @@
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:whitesmoke;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Container
+====================================*/
+/* .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; */
+/* } */
+
+/* Header
+====================================*/
+.header {
+    background-color: black;
+    /* border-radius: 10px; */
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    max-width: 1200px;
+}
+
+.header.fixed {
+    position: fixed;
+    padding: 0px 0px;
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+/* Logo
+====================================*/
+.logo__item {
+    padding-left: 20px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Nav
+====================================*/
+.nav__login, .nav__registration, .nav__add__recipe {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.1s linear;
+}
+
+.nav__registration{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.nav__login{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav__add__recipe {
+    padding-right: 10px;
+}
+
+
+.nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover {
+    opacity: 1;
+}
+
+/* main
+====================================*/
+.main-content {
+    margin-top: 100px;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.main-content__inner {
+    background-color: white;
+}
+
+.content-title {
+    padding-left: 20px;
+    border: 1px solid #000;
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.content-title-text {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 400;
+}
+.food-image {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.food-image-content {
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* time_complexity
+====================================*/
+
+.time_complexity {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.cooking-time, .complexity {
+    max-width: 50%;
+    width: 200px;
+    height: 75px;
+    text-align: center;
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.complexity {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cooking-time-value {
+    margin: 0 auto;
+}
+
+.color {
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    background-color:lime;
+}
+
+.complexity-content {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.complexity-text {
+    margin: auto 30px auto 0px;
+}
+
+/* input-number
+====================================*/
+
+.input-number {
+    display: flex;
+    justify-content: center;
+}
+
+.input-number-input {
+    margin: auto 0;
+}
+
+.input-number-text {
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* list-and-video
+====================================*/
+.list_and_video {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.list, .video {
+    width: 50%;
+    align-items: center;
+}
+
+.list_and_video_title {
+    padding: 0 0 0 24.5px;
+    font-weight: 700;
+}
+
+.table_conteiner {
+    /* margin-left: 20px    ; */
+    background-color:rgb(190, 190, 190);
+    border-radius: 10px;
+}
+
+.ingredients_table {
+    border-collapse: collapse;
+    counter-reset: schetchik;  /* счётчик с названием "schetchik" работает в рамках класса .demotable */
+
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 2;
+}
+
+.ingredients_table_td {
+    font-size: 16px;
+    width: 100%;
+}
+
+.ingredients_table tr {
+    line-height: 40px;
+    counter-increment: schetchik;  /* при встрече тега tr счётчик с названием "schetchik" увеличивается на единицу */
+}
+
+.ingredients_table td,
+.ingredients_table tr:before {
+    padding: .1em .5em;
+    /* border: 1px solid #E7D5C0; */
+}
+
+
+.ingredients_table tr:before {
+    content: counter(schetchik) ".";  /* значение счётчика с названием "schetchik" записывается в первую клетку строки */
+    display: table-cell;
+    vertical-align: middle;
+    /* color: #978777; */
+}
+
+
+/* video
+====================================*/
+.video {
+    border-radius: 10px;
+    width: 600px;
+    /* height: 346px; */
+}
+
+/* text_instruction
+====================================*/
+.recipe__step-title {
+    margin: 15px 0px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.recipe__step-text {
+    font-size: 16px;
+}
+
+.text_instruction_title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+}
+
+.text_instruction_content {
+    margin: 0px auto;
+    max-width: 70%;
+}
+
+/* footer
+====================================*/
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    background-color:rgb(190, 190, 190);
+    height: 300px;
+}
+/* login
+/*--------------------*/
+
+#login
+{
+    background-color: #fff;
+    height: 330px;
+    width: 350px;
+    margin: -150px 0 0 -230px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,
+          0 7px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          1px 1px   0 rgba(0,   0,   0,   .1),
+          3px 3px   0 rgba(255, 255, 255, 1),
+          4px 4px   0 rgba(0,   0,   0,   .1),
+          6px 6px   0 rgba(255, 255, 255, 1),
+          7px 7px   0 rgba(0,   0,   0,   .1);
+    box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.2),
+          0 1px 1px rgba(0, 0, 0, .2),
+          0 3px 0 #fff,
+          0 4px 0 rgba(0, 0, 0, .2),
+          0 6px 0 #fff,
+          0 7px 0 rgba(0, 0, 0, .2);
+}
+
+/* header
+/*--------------------*/
+
+h1
+{
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Balsamiq Sans;
+    position: relative;
+}
+
+
+
+/*--------------------*/
+
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/* input
+/*--------------------*/
+
+#inputs input
+{
+    background: #f1f1f1 url(http://www.red-team-design.com/wp-content/uploads/2011/09/login-sprite.png) no-repeat;
+    padding: 15px 15px 15px 30px;
+    margin: 0 0 10px 0;
+    width: 300px; /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+#username
+{
+    background-position: 5px -2px !important;
+}
+
+#password
+{
+    background-position: 5px -52px !important;
+}
+
+#inputs input:focus
+{
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+#actions
+{
+    margin: 25px 0 0 0;
+}
+
+#submit_1
+{
+    background-color: #ffb94b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+    background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: linear-gradient(top, #fddb6f, #ffb94b);
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Balsamiq Sans;
+    color: #8f5a0a;
+}
+#submit_2{
+    background-color: #ffb94b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+    background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: linear-gradient(top, #fddb6f, #ffb94b);
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 300px;
+    cursor: pointer;
+    font: bold 15px Balsamiq Sans;
+    color: #8f5a0a;
+}
+#submit:hover,#submit:focus
+{
+    background-color: #fddb6f;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
+    background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -moz-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -ms-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -o-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: linear-gradient(top, #ffb94b, #fddb6f);
+}
+
+#submit:active
+{
+    outline: none;
+
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+#submit::-moz-focus-inner
+{
+  border: none;
+}
+
+#actions a
+{
+    color: #3151A2;
+    float: right;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+/*--------------------*/
+
+#back
+{
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 60px;
+    color: #999;
+}
+
+/* ����� ���� vladmaxi, ����� ������� */
+.vladmaxi-top{
+	line-height: 24px;
+	font-size: 11px;
+	background: rgba(0, 0, 0, 0.08);
+	text-transform: uppercase;
+	z-index: 9999;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	font-family: calibri;
+	font-size: 13px;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	-webkit-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+}
+@-webkit-keyframes slideOut{
+	0%{top:-30px; opacity: 0;}
+	100%{top:0px; opacity: 1;}
+}
+
+.vladmaxi-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+	display: block;
+	float: left;
+}
+.vladmaxi-top a:hover{
+	background: #fff;
+}
+.vladmaxi-top span.right{
+	float: right;
+}
+.vladmaxi-top span.right a{
+	float: left;
+	display: block;
+}
+/* Profile */
+.nav__text__profile
+{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.1s linear;
+}
+
+
+
+#main {
+ background-color: #ffffff;
+    width: 1100px;
+ padding: 30px;
+-webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -ms-border-radius: 4px;
+ -o-border-radius: 4px;
+ border-radius: 4px;
+ border-bottom: 4px solid #ddd;
+}
+#real-estates-detail #author img {
+ -webkit-border-radius: 100%;
+ -moz-border-radius: 100%;
+ -ms-border-radius: 100%;
+ -o-border-radius: 100%;
+ border-radius: 100%;
+ border: 5px solid #ecf0f1;
+ margin-bottom: 10px;
+}
+#real-estates-detail .sosmed-author i.fa {
+ width: 30px;
+ height: 30px;
+ border: 2px solid #bdc3c7;
+ color: #bdc3c7;
+ padding-top: 6px;
+ margin-top: 10px;
+}
+.panel-default .panel-heading {
+ background-color: #fff;
+}
+#real-estates-detail .slides li img {
+ height: 450px;
+}

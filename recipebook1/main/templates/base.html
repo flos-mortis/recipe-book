@@ -22,24 +22,16 @@
                     </div>
 
                     <div class="nav">
-                        <a class="nav__add__recipe" href="#">Добавить рецепт</a>
-                        <a class="nav__login" href="#">Войти</a>
-                        <a class="nav__registration" href="#">Регистрация</a>
+                        <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
+                        <a class="nav__login" href="{% url 'autor' %}">Войти</a>
+                        <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
+                        <a class="nav__login" href="{% url 'profile' %}">Профиль</a>
                     </div>
                 </div><!-- /.header__inner -->
             </div><!-- /.container -->
         </header>
 
     {% block content %}{% endblock %}
-
-    <div class="footer">
-        <div class="footer_content">
-
-        </div>
-    </div>
-
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'app.js' %}"></script>
 
     </body>
 </html>

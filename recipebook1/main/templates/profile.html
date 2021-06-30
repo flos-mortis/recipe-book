@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link href="{% static 'css/сss1/main.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    Кулинарная книга
+{% endblock %}
+
+{% block content %}
+<div class="main-content" id="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+
+
+<div class="container">
+<div id="main">
+
+
+ <div class="row" id="real-estates-detail">
+    <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center" id="author">
+                        <img src="https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-valid-user-icon-png-image_516298.jpg" width="200" height="200">
+                        <h3 class="nav__text__profile" id="username">Имя пользователя</h3>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-xs-12">
+        <div class="panel">
+            <div class="panel-body">
+                <ul id="myTab" class="nav nav-pills">
+                    <li class="active"><a href="#detail" data-toggle="tab">Сохранённые рецепты</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <hr>
+                    <div class="tab-pane fade active in" id="detail">
+                        <h4 class="nav__text__profile">Сохранённые рецепты:</h4>
+                        <table class="table table-th-block">
+                            <tbody>
+                                <tr><td class="nav__text__profile"><a href="1.html">Курица по пекински</a></td><td class="nav__text__profile">Описание рецепта</td></tr>
+                                <tr><td class="nav__text__profile"><a href="2.html">Карбонара</a></td><td class="nav__text__profile" >Описание рецепта</td></tr>
+                                <tr><td class="nav__text__profile"><a href="3.html">Котлеты домашние</a></td><td class="nav__text__profile" >Описание рецепта</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <div class="tab-pane fade" id="contact">
+                        <p></p>
+                        <form role="form">
+
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+
+</div><!-- /.main -->
+</div><!-- /.container -->
+    </div> <!-- /.main-content__inner -->
+    </div> <!-- /.container -->
+
+
+
+
+
+<script src="js/js1/main.js"></script>
+<script src="js/js1/app.js"></script>
+{% endblock %}

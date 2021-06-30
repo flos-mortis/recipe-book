@@ -1,0 +1,227 @@
+$color_text: #fff;
+
+
+body {
+    margin: 0;
+    background: url(../images/fon.jpg) no-repeat;
+
+    font-family: 'Open Sans', sans-serif;
+    color: $color_text;
+    font-weight: 700;
+}
+
+.main_content_inner {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 60%;
+    grid-gap: 120px 0;
+}
+
+// Header
+// ==========================================================
+
+.header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-align: center;
+    font-weight: 900;
+    color: $color_text;
+    text-transform: uppercase;      
+}
+
+.header_title {
+    font-size: 90px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+// Navigation
+// ==========================================================
+
+.navigation_bar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav_item {
+    text-decoration: none;
+    color: $color_text;
+
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid $color_text;
+
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.nav_item:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+}
+// Search
+// ==========================================================
+
+.search {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.search_items {
+    display: grid;
+    grid-template-columns: 10% 30% 60%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+
+.search_title {
+    text-align: center;
+    font-size: 40px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    // margin-bottom: 60px;
+}
+
+// Time
+// ==========================================================
+
+.time_title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    margin: auto 0;
+}
+.time_items{
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    display: flex;
+    
+}
+
+.time_item {
+    margin: auto 0px auto 30px; 
+    text-align: center;
+    border: 2px solid $color_text;
+    height: 90px;
+    width: 90px;
+    background: 0;
+
+    font-size: 14px;
+    color: $color_text;
+    text-decoration: none;
+
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.time_item:hover {
+    background-color: #fff;
+    color: #000;    
+}
+
+.time_item_img {
+    padding-top: 10%;
+}
+.time_item_text {
+    margin: 0;
+}
+
+// Complexity
+// ==========================================================
+
+.complexity_title {
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+    margin: auto 0;
+}
+
+.complexity_items {
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+    display: flex;
+}
+
+.complexity_item {
+    margin: auto 0px auto 30px;
+    text-align: center;
+    border: 2px solid $color_text;
+    height: 90px;
+    width: 90px;
+    background: 0;
+
+    font-size: 14px;
+    color: $color_text;
+    text-decoration: none;
+
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.complexity_item:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.complexity_item_img {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto;
+    margin-top: 9px;
+
+    border-radius: 10px;
+}
+
+.complexity_item .green {
+    background-color: lawngreen;  
+}
+
+.complexity_item .yellow {
+    background-color: yellow;  
+}
+.complexity_item .red {
+    background-color: red;  
+}
+
+.complexity_item_text {
+    margin: 0;
+    padding-top: 4px;
+}
+
+// Search_button
+// ==========================================================
+
+.search_button {
+    grid-column: 1/4;
+    grid-row: 4/5;
+
+    width: 200px;
+    height: 80px;
+    margin: auto;
+    
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    cursor:pointer;
+    overflow: hidden; 
+
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px;
+
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.search_button:hover {
+    background-color: #fff;
+    color: #000;
+}

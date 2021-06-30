@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link href="{% static 'css/сss1/main.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    Кулинарная книга
+{% endblock %}
+
+{% block content %}
+<div class="main-content" id="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <form id="login">
+                <h1>Вход</h1>
+                <fieldset id="inputs">
+                    <input id="email" type="text" placeholder="Введите свой E-mail" autofocus required>
+                    <input id="password" type="password" placeholder="Введите пароль" required>
+                </fieldset>
+                <fieldset id="actions">
+                <input type="submit" id="submit_1" value="ВОЙТИ">
+                <a href="{% url 'register' %}">Регистрация</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/js1/main.js"></script>
+<script src="js/js1/app.js"></script>
+{% endblock %}
