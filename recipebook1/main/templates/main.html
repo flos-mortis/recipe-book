@@ -13,11 +13,11 @@
             <div class="header">
                 <h1 class="header_title">Кулинарная книга</h1>
                 <nav class="navigation_bar">
-                    <a href="#" class="nav_item">
+                    <a href="{% url 'register' %}" class="nav_item">
                         Регистрация
                     </a>
 
-                    <a href="#" class="nav_item">
+                    <a href="{% url 'autor' %}" class="nav_item">
                         Войти
                     </a>
                 </nav>
@@ -72,7 +72,8 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
     {% block scripts %}
         <script src="{% static 'js/js2/main_page.js' %}"></script>
     {% endblock %}
-{% endblock %}

@@ -5,8 +5,7 @@ from .forms import RecipeForm
 
 # main page with all recipes
 def main(request):
-    recipe = Recipes.objects.order_by('-id')
-    return render(request, 'main.html', {'recipes': recipe})
+    return render(request, 'main.html')
 
 
 # page add recipe
@@ -16,7 +15,7 @@ def add(request):
         form = RecipeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('main')
         else:
             error = 'неверно введены данные'
 
@@ -31,16 +30,16 @@ def recipe(request):
 
 
 def autor(request):
-    return render(request, 'main/templates/autor.html')
+    return render(request, 'autor.html')
 
 
 def register(request):
-    return render(request, 'main/templates/register.html')
+    return render(request, 'register.html')
 
 
 def search(request):
-    return render(request, 'main/templates/search.html')
+    return render(request, 'search.html')
 
 
 def profile(request):
-    return render(request, 'main/templates/profile.html')
+    return render(request, 'profile.html')
