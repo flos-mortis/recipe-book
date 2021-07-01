@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import LoginUser, RegesterUser
+from .views import LoginUser, RegisterUser
 
 
 urlpatterns = [
@@ -11,7 +11,7 @@ urlpatterns = [
     path('recipe', views.recipe, name='recipe'),
     path('profile', views.profile, name='profile'),
     path('search', views.search, name='search'),
-    path('register', RegesterUser.as_view(), name = 'register'),
+    path('register', RegisterUser.as_view(), name = 'register'),
     path('login', LoginUser.as_view(), name = 'login'),
 ]
 

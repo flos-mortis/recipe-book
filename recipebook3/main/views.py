@@ -37,7 +37,7 @@ def recipe(request):
     return render(request, 'recipe.html')
 
 
-class RegesterUser(CreateView):
+class RegisterUser(CreateView):
     model = User
     template_name = 'register.html'
     form_class = RegisterUserForm

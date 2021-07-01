@@ -35,6 +35,7 @@
         <form id="login" method="post">
             <h1>Регистрация</h1>
             {% csrf_token %}
+            {{form.errors}}
             {%for f in form%}
               <p><label class = "form-label" for "{{ f.id_for_label }}">{{f.label}}: </label><br>{{f}}</p>
               {%endfor%}
