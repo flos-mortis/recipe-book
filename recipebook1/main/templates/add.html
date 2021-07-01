@@ -1,1 +1,64 @@
-# html for add recipe page
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    <link href="{% static 'css/css2/recipe.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+    Кулинарная книга
+{% endblock %}
+
+{% block content %}
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo">
+                <h1>
+                    <a class="logo__item" href="{% url 'home' %}">Кулинарная книга</a>
+                </h1>
+            </div>
+
+            <div class="nav">
+                <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
+                <a class="nav__add__recipe" href="{% url 'home' %}">Главная</a>
+                <a class="nav__add__recipe" href="{% url 'profile' %}">Профиль</a>
+                <a class="nav__add__recipe" href="{% url 'search' %}">Рецепты</a>
+                <a class="nav__login" href="{% url 'login' %}">Войти</a>
+                <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
+            </div>
+        </div><!-- /.header__inner -->
+    </div><!-- /.container -->
+</header>
+<div class="main-content" id="main-content">
+    <br>
+    <div class="container">
+        <div class="main-content__inner">
+            <div class="text_instruction">
+                <h4 class="text_instruction_title">На этой странице вы можете добавить свой рецепт</h4>
+                <div class="text_instruction_content">
+                    <br>
+                    <div class="recipe__step">
+                        <div class="recipe__step-title">Форма для добавления рецепта</div>
+                        <div class="recipe__step-text">
+                            <form method="post">
+                                {% csrf_token %}
+                                {{form.name}}<br><br>
+                                {{form.text}}<br><br>
+                                {{form.photo}}<br>
+                                <p>Время приготовления:</p>
+                                {{form.time}}<br><br>
+                                {{form.complexity}}<br>
+                                <p>Количество порций:</p>
+                                {{form.portions}}<br><br>
+                                {{form.ingredients}}<br><br>
+                                {{form.video}}<br><br>
+                                <button type="submit" class="btn btn-success">Добавить</button>
+                                <span>{{error}}</span>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+
+        </div> <!-- /.main-content__inner -->
+    </div> <!-- /.container -->
+</div> <!-- /.main-content -->
+{% endblock %}

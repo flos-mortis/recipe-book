@@ -1,7 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import Recipes
 from .forms import RecipeForm
-
+from .models import Recipes
+from django.contrib import auth
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.models import User
+from .forms import AuthUserForm, RegisterUserForm
+from django.views.generic import CreateView
 
 # main page with all recipes
 def main(request):
@@ -18,23 +24,34 @@ def add(request):
             return redirect('main')
         else:
             error = 'неверно введены данные'
-
-    return render(request, 'add.html', {'error': error})
+    form = RecipeForm()
+    context = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'add.html', context)
 
 
 # page show recipe
 def recipe(request):
-    # method for get need recipe
-    form = RecipeForm()
-    return redirect(request, 'recipe.html', {'recipe': form})
+    return render(request, 'recipe.html')
 
 
-def autor(request):
-    return render(request, 'autor.html')
+class RegisterUser(CreateView):
+    model = User
+    template_name = 'register.html'
+    form_class = RegisterUserForm
+    success_url = reverse_lazy('login')
+    success_msg = 'Пользователь успешно создан.'
 
 
-def register(request):
-    return render(request, 'register.html')
+
+class LoginUser(LoginView):
+    template_name = 'login.html'
+    form_class = AuthUserForm
+    success_url = reverse_lazy('home')
+    def get_success_url(self):
+        return self.success_url
 
 
 def search(request):

@@ -17,7 +17,7 @@
                         Регистрация
                     </a>
 
-                    <a href="{% url 'autor' %}" class="nav_item">
+                    <a href="{% url 'login' %}" class="nav_item">
                         Войти
                     </a>
                 </nav>
@@ -68,8 +68,9 @@
                     <button class="search_button" type="submit">
                         Найти
                     </button>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> {#      /.search_items          #}
+            </div> {#      /.search      #}
+        </div> {#  main_content_inner  #}
+    </div> {#    /.main_content #}
+    <script type="text/javascript" src="{% static "js/js2/main_page.js" %}"></script>
 {% endblock %}

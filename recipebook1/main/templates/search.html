@@ -19,7 +19,10 @@
 
             <div class="nav">
                 <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
-                <a class="nav__login" href="{% url 'autor' %}">Войти</a>
+                <a class="nav__add__recipe" href="{% url 'home' %}">Главная</a>
+                <a class="nav__add__recipe" href="{% url 'profile' %}">Профиль</a>
+                <a class="nav__add__recipe" href="{% url 'search' %}">Рецепты</a>
+                <a class="nav__login" href="{% url 'login' %}">Войти</a>
                 <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
             </div>
         </div><!-- /.header__inner -->
@@ -27,7 +30,8 @@
 </header>
 <div class="main-content" id="main-content">
     <div class="main-content__inner">
-        <div class="content">
+        <a href = "{% url 'recipe' %}" >
+        <a class="content" href = "{% url 'recipe' %}" >
             <div class="content-title">
                 <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
             </div>
@@ -51,8 +55,7 @@
                     </div>
                 </div> <!-- /.time_complexity -->
             </div>
-
-        </div>
+        </a>
 
         <div class="content">
             <div class="content-title">
