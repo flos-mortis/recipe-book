@@ -21,8 +21,12 @@
 
             <div class="nav">
                 <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
-                <a class="nav__login" href="{% url 'autor' %}">Войти</a>
+                <a class="nav__add__recipe" href="{% url 'home' %}">Главная</a>
+                <a class="nav__add__recipe" href="{% url 'profile' %}">Профиль</a>
+                <a class="nav__add__recipe" href="{% url 'search' %}">Рецепты</a>
+                <a class="nav__login" href="{% url 'login' %}">Войти</a>
                 <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
+
             </div>
         </div><!-- /.header__inner -->
     </div><!-- /.container -->
