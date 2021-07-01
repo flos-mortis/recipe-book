@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block styles %}
-     <link rel="stylesheet" href="https://bootstraptema.ru/plugins/2015/bootstrap3/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/2015/bootstrap3/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="{% static 'css/css2/profile.css' %}" rel="stylesheet">
 {% endblock %}
@@ -21,9 +21,9 @@
 
             <div class="nav">
                 <a class="nav__add__recipe" href="{% url 'add' %}">Добавить рецепт</a>
-                <a class="nav__add__recipe" href="{% url 'home' %}">Главная</a>
-                <a class="nav__add__recipe" href="{% url 'profile' %}">Профиль</a>
-                <a class="nav__add__recipe" href="{% url 'search' %}">Рецепты</a>
+                <a class="nav__main" href="{% url 'home' %}">Главная</a>
+                <a class="nav__profile" href="{% url 'profile' %}">Профиль</a>
+                <a class="nav__search" href="{% url 'search' %}">Рецепты</a>
                 <a class="nav__login" href="{% url 'login' %}">Войти</a>
                 <a class="nav__registration" href="{% url 'register' %}">Регистрация</a>
 

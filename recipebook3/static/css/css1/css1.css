@@ -1,8 +1,6 @@
-body {
-    width: 100%;
-    max-width: 1200px;
+body{
     margin: 0 auto;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
 }
 
 *,
@@ -11,41 +9,31 @@ body {
     box-sizing: border-box;
 }
 
-/* Container
-====================================*/
-/* .container {
+/* // Header
+// =============================================== */
+
+.container{
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; */
-/* } */
+}
 
-/* Header
-====================================*/
 .header {
     background-color: black;
-    /* border-radius: 10px; */
     z-index: 1000;
     position: absolute;
     width: 100%;
     top: 0;
-    max-width: 1200px;
-}
-
-.header.fixed {
-    position: fixed;
-    padding: 0px 0px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    align-items: center;
+    align-items: center;    
 }
 
-/* Logo
-====================================*/
 .logo__item {
     padding-left: 20px;
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -55,9 +43,8 @@ body {
     text-decoration: none;
 }
 
-/* Nav
-====================================*/
-.nav__login, .nav__registration, .nav__add__recipe {
+
+.nav__login, .nav__registration, .nav__add__recipe, .nav__main, .nav__profile, .nav__search {
     font-family: 'Fira Sans Condensed', sans-serif;
     text-decoration: none;
     color: #fff;
@@ -65,13 +52,13 @@ body {
     opacity: 0.75;
     transition: opacity 0.1s linear;
 }
-
+            
 .nav__registration{
     padding-left: 10px;
     padding-right: 20px;
 }
 
-.nav__login{
+.nav__login, .nav__main, .nav__profile, .nav__search{
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -80,9 +67,14 @@ body {
     padding-right: 10px;
 }
 
-
-.nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover {
+.nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover, 
+.nav__main:hover, .nav__profile:hover, .nav__search:hover{
     opacity: 1;
+}
+
+.header.fixed {
+    position: fixed;
+    padding: 0px 0px;
 }
 
 /* main
@@ -321,7 +313,7 @@ body {
 /* header
 /*--------------------*/
 
-h1
+.main-content h1
 {
     text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
     text-transform: uppercase;
