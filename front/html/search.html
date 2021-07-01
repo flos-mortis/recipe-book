@@ -29,212 +29,122 @@
     </div><!-- /.container -->
 </header>
 
-<div class="main-content" id="main-content">
-    <div class="main-content__inner">
+<div class="main_content">
+    <div class="container">
+        <h2 class="main_content_title">Результаты поиска</h2>
         <div class="content">
-            <div class="content-title">
-                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
-                </div>
+            <!-- тут в href вставляем ссылку на рецепт -->
+            <a class="content_item" href="#">
+                <!-- на место src вставляем картинку рецепта -->
+                <img class="content_item_image" src="../images/food-image.jpg" alt="">
 
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
-                    </div>
-
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div>
-            
-        </div>
-
-        <div class="content">
-            <div class="content-title">
-                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
-                </div>
+                <div class="content_item_info">
                     
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
+                    <h4 class="content_item_title">
+                        <!-- Тут вставляем название рецепта -->
+                        Ватрушка с ягодами и творожным кремом
+                    </h4>
+
+                    <div class="content_item_time">
+                        <!-- img не меняем, это будильник -->
+                        <img class="time_item_img" src="../images/alarm.png" alt="">
+                        <!-- сюда встаавляем длительность
+                            до 30 мин 
+                            30 мин - час
+                            более часа
+                        пишите именно так, потому что размер иконки не меняется-->
+                        <p class="time_item_text">до 30 мин</p>
                     </div>
 
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div>
-            
-        </div>
-
-        <div class="content">
-            <div class="content-title">
-                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
-                </div>
+                    <div class="content_item_complexity">
+                        <!-- в class вставляем 
+                            green
+                            yellow
+                            red
+                        в зависимость от сложности -->
+                        <div class="complexity_item_img green"></div>
+                        <!-- тут пишем сложность
+                        легкая
+                        средняя
+                        сложная
+                         -->
+                        <p class="complexity_item_text">легкая</p>
+                    </div>  
                     
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
+                </div><!-- /.content_item_info -->
+                
+            </a> <!-- /.content_item -->
+
+            <a class="content_item" href="#">
+                <img class="content_item_image" src="../images/food-image.jpg" alt="">
+
+                <div class="content_item_info">
+
+                    <h4 class="content_item_title">
+                        Ватрушка с ягодами и творожным кремом
+                    </h4>
+
+                    <div class="content_item_time">
+                        <img class="time_item_img" src="../images/alarm.png" alt="">
+                        <p class="time_item_text">до 30 мин</p>
                     </div>
 
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div>
-            
-        </div>
+                    <div class="content_item_complexity">
+                        <div class="complexity_item_img green"></div>
+                        <p class="complexity_item_text">легкая</p>
+                    </div>  
 
-        <div class="content">
-            <div class="content-title">
-                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
                 </div>
+                
+            </a>
+
+            <a class="content_item" href="#">
+                <img class="content_item_image" src="../images/food-image.jpg" alt="">
+
+                <div class="content_item_info">
                     
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
+                    <h4 class="content_item_title">
+                        Ватрушка с ягодами и творожным кремом
+                    </h4>
+
+                    <div class="content_item_time">
+                        <img class="time_item_img" src="../images/alarm.png" alt="">
+                        <p class="time_item_text">до 30 мин</p>
                     </div>
 
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div>
-            
-        </div>
-
-        <div class="content">
-            <div class="content-title">
-                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
+                    <div class="content_item_complexity">
+                        <div class="complexity_item_img green"></div>
+                        <p class="complexity_item_text">легкая</p>
+                    </div>  
+                    
                 </div>
+                
+            </a>
+
+            <a class="content_item" href="#">
+                <img class="content_item_image" src="../images/food-image.jpg" alt="">
+
+                <div class="content_item_info">
                     
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
+                    <h4 class="content_item_title">
+                        Ватрушка с ягодами и творожным кремом
+                    </h4>
+
+                    <div class="content_item_time">
+                        <img class="time_item_img" src="../images/alarm.png" alt="">
+                        <p class="time_item_text">до 30 мин</p>
                     </div>
 
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div>
-            
-        </div>
-
-        <div class="content">
-            <div class="content-title">
-                <p class="content-title-text">Ватрушка с ягодами и творожным кремом</p>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
+                    <div class="content_item_complexity">
+                        <div class="complexity_item_img green"></div>
+                        <p class="complexity_item_text">легкая</p>
+                    </div>  
+                    
                 </div>
-                    
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm-mini.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
-                    </div>
-
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div>
-            
-        </div>
-
-        <div class="content">
-            <div class="content-title">
-                <h1 class="content-title-text">Ватрушка с ягодами и творожным кремом</h1>
-            </div>
-            
-            <div class="under_title">
-                <div class="food-image">
-                    <img class= "food-image-content" src="../images/food-image.jpg">
-                </div>
-                    
-                <div class="time_complexity">
-                    <div class="cooking-time">
-                        <img src="../images/alarm.png" >
-                        <h4 class="cooking-time-value">3 часа</h4>
-                    </div>
-
-                    <div class="complexity">
-                        <div class="complexity-content">
-                            <h4 class="complexity-text">Сложность </h4>
-                            <div class="color"></div>  
-                        </div>
-                    </div>
-                </div> <!-- /.time_complexity -->
-            </div> <!-- /.under_title -->
-            
-        </div> <!-- /.content -->
-
-        <div class="pagination">
-            <div class="pagination_block">
-                <a class="pagination_block_item" href="#">1</a>
-                <a class="pagination_block_item" href="#">2</a>
-                <a class="pagination_block_item" href="#">3</a>
-                <a class="pagination_block_item" href="#">4</a>
-                <a class="pagination_block_item" href="#">5</a>
-                <a class="pagination_block_item" href="#">6</a>
-                <a class="pagination_block_item" href="#">7</a>
-            </div>
-        </div>
-    </div> <!-- /.main-content__inner  -->
-</div> <!-- main-content -->
-
-<script src="../js/app.js"></script>
+                
+            </a>
+    </div> <!-- /.content -->
+</div><!-- /.main_content -->
 
 </body>
 </html>

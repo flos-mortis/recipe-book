@@ -45,8 +45,21 @@ body {
 // ==========================================================
 
 .navigation_bar {
+    // display: flex;
+    // justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 100px;
+}
+
+.registration {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .nav_item {
@@ -84,7 +97,6 @@ body {
     font-size: 40px;
     grid-column: 1/4;
     grid-row: 1/2;
-    // margin-bottom: 60px;
 }
 
 // Time
@@ -101,7 +113,6 @@ body {
     grid-row: 2/3;
 
     display: flex;
-    
 }
 
 .time_item {

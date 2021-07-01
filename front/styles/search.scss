@@ -1,0 +1,229 @@
+$color_text: #000;
+
+body{
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+// Header
+// ===============================================
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header {
+    background-color: black;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        align-items: center;
+    }
+
+        .logo__item {
+            padding-left: 20px;
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 38px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav__login, .nav__registration, .nav__add__recipe {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            opacity: 0.75;
+            transition: opacity 0.1s linear;
+        }
+            
+        .nav__registration{
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        
+        .nav__login{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .nav__add__recipe {
+            padding-right: 10px;
+        }
+
+        .nav__login:hover, .nav__registration:hover, .nav__add__recipe:hover{
+            opacity: 1;
+        }
+
+.header.fixed {
+    position: fixed;
+    padding: 0px 0px;
+}
+
+
+// Main content
+// ===============================================
+.main_content{
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+
+    .container {
+        padding-top: 100px;
+        background-color: #fff;
+        text-align: center;
+
+        .main_content_title {
+            font-size: 36px;
+        }
+    }
+}
+
+.content{
+    width: 100%;
+    max-width: 1200px;    
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .content_item {
+        color: $color_text;
+        margin-bottom: 20px;
+        position: relative;
+        width: 50%;
+
+        display: flex;
+        justify-content: center;
+
+        height: 315px;
+
+        overflow: hidden;
+
+        .content_item_image {
+            margin: 0 auto;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+
+            transform: translate3d(-50%, -50%, 0);
+            transition: opacity 0.5s;
+        }
+
+        .content_item_info {
+            display: none;
+            grid-template-columns: 50% 50%;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+            position: absolute;
+            bottom: 0;
+                        
+            z-index: 2;
+
+            .content_item_title {
+                grid-column: 1/3;
+
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .content_item_time {
+                text-align: center;
+                border: 2px solid $color_text;
+                height: 90px;
+                width: 90px;
+                background: 0;
+            
+                font-size: 14px;
+                color: $color_text;
+                text-decoration: none;
+
+                grid-column: 1/2;
+
+                justify-self: end;
+                margin-right: 20px;
+                }
+
+            .content_item_complexity {
+                text-align: center;
+                border: 2px solid $color_text;
+                height: 90px;
+                width: 90px;
+                background: 0;
+            
+                font-size: 14px;
+                color: $color_text;
+                text-decoration: none;
+
+                grid-column: 2 / 3;
+
+                justify-self: start;
+                margin-left: 20px;
+
+                .complexity_item_img {
+                    width: 48px;
+                    height: 48px;
+                
+                    margin: 0 auto;
+                    margin-top: 9px;
+                
+                    border-radius: 10px;
+
+                }
+            
+                .complexity_item_img.green {
+                    background-color: lawngreen;  
+                }
+            
+                .complexity_item_img.yellow {
+                    background-color: yellow;  
+                }
+
+                .complexity_item_img.red {
+                    background-color: red;  
+                }
+            
+                .complexity_item_text {
+                    margin: 0;
+                    padding-top: 4px;
+                }
+            }
+            
+        }
+    }
+
+    .content_item:hover {
+        .content_item_image {
+            opacity: 0.25;
+        }
+        
+        .content_item_info {
+            display: grid;
+        }
+    }   
+}
